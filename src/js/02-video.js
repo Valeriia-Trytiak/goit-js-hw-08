@@ -8,7 +8,7 @@
 
 //Инициализация плеера
 import Player from '@vimeo/player';
-let throttle = require('lodash.throttle');
+const throttle = require('lodash.throttle');
 
 const iframeEl = document.querySelector('iframe');
 const player = new Player(iframeEl);
