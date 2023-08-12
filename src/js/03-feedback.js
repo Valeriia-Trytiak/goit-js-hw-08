@@ -30,10 +30,10 @@ function onFormElInput() {
 
 // функція, яка перевіряє локальне сховище та заповнює поля форми даними
 function updateFormEl() {
-  const values = JSON.parse(localStorage.getItem('feedback-form-state'));
-  if (localStorage.length === 0) {
+  if (localStorage.getItem('feedback-form-state') === null) {
     return;
   }
+  const values = JSON.parse(localStorage.getItem('feedback-form-state'));
   inputEmailEl.value = values.email;
   textareaEl.value = values.message;
 }
@@ -58,3 +58,16 @@ function onBtnSubmit(evt) {
   evt.currentTarget.reset();
   localStorage.clear();
 }
+
+// функція, яка перевіряє локальне сховище та заповнює поля форми даними
+// function updateFormEl() {
+//   const values = JSON.parse(localStorage.getItem('feedback-form-state'));
+
+//   inputEmailEl.value = values.email || '';
+//   textareaEl.value = values.message || '';
+//   if (localStorage.length === 0) {
+//     return;
+//   }
+//   inputEmailEl.value = values.email;
+//   textareaEl.value = values.message;
+// }
