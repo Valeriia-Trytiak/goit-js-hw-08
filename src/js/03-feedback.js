@@ -21,7 +21,7 @@ formEl.addEventListener('submit', onBtnSubmit);
 
 // збираю значення з інпуту та текстерії та додаю до локального сховища
 function onFormElInput() {
-  if (inputEmailEl.value !== '' && textareaEl.value !== '') {
+  if (inputEmailEl.value !== '' || textareaEl.value !== '') {
     const resultForm = { email: inputEmailEl.value, message: textareaEl.value };
     localStorage.setItem('feedback-form-state', JSON.stringify(resultForm));
     // console.log(resultForm);
