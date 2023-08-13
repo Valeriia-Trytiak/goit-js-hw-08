@@ -30,13 +30,3 @@ let gallery = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-
-// Добавление слушателя событий и делегирование
-galleryContainer.addEventListener('click', onGalleryContainerClick);
-
-function onGalleryContainerClick(evt) {
-  // запрешаю переход по ссілке и скачивание файла
-  evt.preventDefault();
-  // открываю модалку
-  // gallery.open();
-}
